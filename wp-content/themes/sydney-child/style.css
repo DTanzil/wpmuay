@@ -1,0 +1,275 @@
+/*
+Theme Name: Sydney Child
+Theme URI: http://athemes.com/theme/sydney
+Author: Dania Tanzil
+Template: sydney
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sydney
+*/
+
+/* =============== GLOBAL (start) ================= */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Audiowide', cursive !important;
+}
+h1 { font: 52px/1.1 'Audiowide', cursive;}
+	h2 { font: 42px/1.1 'Audiowide', cursive;}
+	h3 { font: 32px/1.1 'Audiowide', cursive;}
+	h4 { font: 25px/1.1 'Audiowide', cursive;}
+	h5 { font: 20px/1.1 'Audiowide', cursive;}
+	h6 { font: 18px/1.1 'Audiowide', cursive;}
+
+
+.site-logo {
+	max-height: 150px;
+	
+}
+
+.site-logo, .header-wrap .col-md-4 {
+	margin-bottom: 0!important;
+}
+
+.slide-inner.text-slider-stopped {
+	/*background-color: rgba(206, 22, 22, 0.41);*/
+}
+
+.hentry .title-post {
+	text-transform: uppercase;
+	text-align: center;
+	color:#D1DC2F;
+	font-size: 50px;
+}
+
+.page-wrap {
+	padding: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.mty-header {
+	font-family: 'Audiowide', cursive;
+}
+
+.mty-underline {
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+}
+
+.mty-bgrow {
+	background-image: url("http://localhost/muaysukhothai/wp-content/uploads/2016/05/kru-stephane.jpg");
+}
+
+.yellow {
+	border-bottom-color:#D1DC2F;
+	/*5px solid #D1DC2F*/
+}
+
+/*.grey {
+	color: #808080;
+}*/
+
+.red {
+
+}
+
+.text-slider .maintitle {
+	font-size: 30px;
+	font-family: 'Raleway', sans-serif!important;
+}
+
+.text-slider .subtitle {
+	font-size: 42px;
+	font-family: 'Audiowide', cursive;
+}
+
+
+#mainnav ul li, .sub-menu ul li {
+	text-transform: uppercase;
+}
+
+#mainnav ul li a {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/*a.mty-btn, .roll-button {
+	
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+
+	background-color: #E48681;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+	-moz-box-shadow:inset 0px 40px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 40px 0px -24px #e67a73;
+	box-shadow:inset 0px 40px 0px -24px #e67a73;
+
+}*/
+.mty-img-circle {
+
+}
+
+
+.roll-button {
+	background-color: #BB0C0C;
+	color:white;
+	padding: 10px 65px;
+	border:none;
+	border-radius: 0;
+
+
+
+/*   background: #cf6767;
+   background: -webkit-gradient(linear, left top, left bottom, from(#D40000), to(#D46E6E));
+   background: -webkit-linear-gradient(top, #D40000, #D46E6E);
+   background: -moz-linear-gradient(top, #D40000, #D46E6E);
+   background: -ms-linear-gradient(top, #D40000, #D46E6E);
+   background: -o-linear-gradient(top, #D40000, #D46E6E);
+   padding: 10.5px 51px;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 0px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   border:none;
+*/
+
+
+}
+
+/* =============== GLOBAL (end) ================= */
+
+
+/* =============== Pricing Page (start) ================= */
+
+.page-wrap .content-wrapper {
+	background-color: transparent;
+}
+
+.mty-card {
+	background:aliceblue;
+	border-left:13px solid red;
+	padding:20px;
+}
+
+.mty-card h4 {
+	border-bottom: 1px solid #B9B2B2;
+}
+
+.mty-price {
+	background-color: rgba(255, 224, 0, 0.56);
+	padding:10px;
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+
+.mty-card .corner-ribbon.top-left {
+	/*top: 15px;
+	left: -65px;*/
+	transform: rotate(-45deg);
+	-webkit-transform:roate(-45deg);
+}
+
+.mty-card .corner-ribbon {
+	position: absolute;
+/*	top: 15px;
+	left: -65px;*/
+	width: 200px;
+	font-size: 13px;
+	text-align: center;
+	line-height: 35px;
+	letter-spacing: 1px;
+	color: #fff;
+	background: red;
+}
+/* =============== About Page (end) ================= */
+
+
+
+/* =============== Responsive (start) ================= */
+
+
+@media only screen and (max-width: 479px) {
+	h2 { font: 27px 'Audiowide', cursive !important;}
+}
+
+/* =============== Responsive (end) ================= */
+
+
+#wrap{
+	background:#ddd;
+}
+
+.g-hover-card {
+  position: relative;  
+  text-align: center;
+  background-color: #fff;
+}
+
+.g-hover-card img {
+  width: 280px;
+  height: 135px;
+}
+
+.g-hover-card .user-avatar {
+  position: relative;
+  top: -40px;
+  margin-bottom: -40px;
+}
+
+.g-hover-card .user-avatar img {
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.g-hover-card .info {
+  padding: 4px 8px 10px;
+}
+
+.g-hover-card  .info.title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 1;
+  color: #262626;
+  vertical-align: middle;
+}
+
+.g-hover-card  .info.descriptions {
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 20px;
+  color: #737373;
+  text-overflow: ellipsis;
+}
+
+.g-hover-card .bottom {
+  padding: 0 20px;
+  margin-bottom: 17px;
+}
+.g-hover-card{
+  width: 280px;
+  padding-top: 0;
+  overflow: hidden;
+}
