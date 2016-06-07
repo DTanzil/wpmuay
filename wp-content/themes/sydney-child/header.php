@@ -20,6 +20,7 @@
 <?php endif; ?>
 <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
+<script src="https://use.fontawesome.com/86f2bbbcd7.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

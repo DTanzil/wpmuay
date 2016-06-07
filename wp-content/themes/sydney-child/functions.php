@@ -16,6 +16,18 @@ function sydney_child_enqueue() {
 
 }
 
+function deactivate_plugin_conditional() {
+    if ( is_plugin_active('all-in-one-event-calendar-extended-views/all-in-one-event-calendar-extended-views.php') ) {
+    	// var_dump("AFAF"); die();
+    	// deactivate_plugins('all-in-one-event-calendar-extended-views/all-in-one-event-calendar-extended-views.php');    
+    } else {
+    	// var_dump("AFAaaaaF"); die();
+    }
+}
+// add_action( 'wp_loaded', 'deactivate_plugin_conditional' );
+
+
+
 function child_remove_parent_function() {
     // remove_action( 'init', 'parent_function' );
     remove_action( 'wp_enqueue_scripts', 'sydney_custom_styles' );

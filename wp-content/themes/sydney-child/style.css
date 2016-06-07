@@ -94,31 +94,15 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
 	font-weight: bold;
 }
 
-/*a.mty-btn, .roll-button {
-	
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 12px;
-	padding: 10px 30px;
-
-	background-color: #E48681;
-	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
-	color: #FFF;
-
-	border-radius: 0px;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border: 1px solid rgba(0,0,0,0.3);
-	border-bottom-width: 3px;
-	-moz-box-shadow:inset 0px 40px 0px -24px #e67a73;
-	-webkit-box-shadow:inset 0px 40px 0px -24px #e67a73;
-	box-shadow:inset 0px 40px 0px -24px #e67a73;
-
-}*/
-.mty-img-circle {
-
+.mty-icons {
+	font-size: 33px;
+	color:white;
+	margin-right: 25px;
 }
 
+.footer-widgets {
+	padding: 25px 0;
+}
 
 .roll-button {
 	background-color: #BB0C0C;
@@ -180,25 +164,25 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
 	margin-top: 20px;
 }
 
-.mty-card .corner-ribbon.top-left {
-	/*top: 15px;
-	left: -65px;*/
-	transform: rotate(-45deg);
-	-webkit-transform:roate(-45deg);
+.corner-ribbon.top-left {
+	/*top: 15px; left: -65px;*/
+	top:25px;
+	left:175px;
+	transform: rotate(45deg);
+	-webkit-transform:roate(45deg);
 }
 
-.mty-card .corner-ribbon {
+.corner-ribbon {
 	position: absolute;
-/*	top: 15px;
-	left: -65px;*/
 	width: 200px;
 	font-size: 13px;
 	text-align: center;
 	line-height: 35px;
 	letter-spacing: 1px;
 	color: #fff;
-	background: red;
+	background: #17DA16;
 }
+
 /* =============== About Page (end) ================= */
 
 
@@ -212,7 +196,7 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
 
 /* =============== Responsive (end) ================= */
 
-
+/*
 #wrap{
 	background:#ddd;
 }
@@ -273,3 +257,4 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
   padding-top: 0;
   overflow: hidden;
 }
+*/
