@@ -16,6 +16,9 @@ function sydney_child_enqueue() {
 
 }
 
+// Enable shortcodes in text widgets
+add_filter('widget_text','do_shortcode');
+
 function deactivate_plugin_conditional() {
     if ( is_plugin_active('all-in-one-event-calendar-extended-views/all-in-one-event-calendar-extended-views.php') ) {
     	// var_dump("AFAF"); die();
@@ -112,9 +115,10 @@ function mty_custom_styles($custom) {
 	//Header image
 	$header_bg_size = get_theme_mod('header_bg_size','cover');	
 	$header_height = get_theme_mod('header_height','300');
+
 	$custom .= ".header-image { background-size:" . esc_attr($header_bg_size) . ";}"."\n";
 	$custom .= ".header-image { height:" . intval($header_height) . "px; }"."\n";
-
+	
 	//Menu style
 	$sticky_menu = get_theme_mod('sticky_menu','sticky');
 	if ($sticky_menu == 'static') {
@@ -202,12 +206,74 @@ function mty_custom_styles($custom) {
 		$custom .= ".slide-inner.text-slider-stopped { display:block;}"."\n";	
     }
 
+    $custom .= ".ai1ec-stream-view .ai1ec-date-title { background-color: #e20e0e; border-radius: 0; }" . "\n";
 
-	//Output all the styles
+    //Output all the styles
 	wp_add_inline_style( 'sydney-style', $custom );	
 }
 
 
+	//override to customize About Page
 
+	/**
+	 * Styles the header image and text displayed on the blog
+	 *
+	 * @see sydney_custom_header_setup().
+	 */
+	function sydney_header_style() {
+
+
+		$pageid = get_the_ID(); 
+
+		if ( get_header_image() && ( get_theme_mod('front_header_type') == 'image' && is_front_page() || get_theme_mod('site_header_type', 'image') == 'image' && !is_front_page() ) ) {
+			$headerimg = ( $pageid == 83 ? '' : get_header_image() );
+			$headerimgmb = ( $pageid == 83 ? 'none' : 'block' );
+		?>
+		<style type="text/css">
+			.header-image {
+				background-image: url(<?php echo $headerimg; ?>);
+				display: block;
+			}
+			@media only screen and (max-width: 1024px) {
+				.header-inner {
+					display: <?php echo $headerimgmb; ?>;
+				}
+				.header-image {
+					background-image: none;
+					height: auto !important;
+				}		
+			}
+		</style>
+		<?php
+		}
+	}
+
+	// TODO: Function which remove Plugin Update Notices – Askimet
+	function disable_plugin_updates( $value ) {
+	   unset( $value->response['akismet/akismet.php'] );
+	   return $value;
+	}
+	// add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
+
+
+
+
+	// function ai1ec_get_events_relative_to_filter_dan(array(
+	// 				'cat_ids'      => $args['cat_ids'],
+	// 				'tag_ids'      => $args['tag_ids'],
+	// 				'post_ids'     => $args['post_ids'],
+	// 				'auth_ids'     => $args['auth_ids'],
+	// 				'instance_ids' => $args['instance_ids'],
+	// 			),
+	// 			$view_args,
+	// 			apply_filters(
+	// 				'ai1ec_show_unique_events',
+	// 				false
+	// 			)) 
+	// {
+
+	// }
+
+	// add_filter('ai1ec_get_events_relative_to_filter', 'ai1ec_get_events_relative_to_filter_dan', '10', '3');
 
 ?>

@@ -1,40 +1,36 @@
 <?php
-/**
- * The template for displaying all single posts.
- *
- * @package Sydney
- */
 
-get_header(); ?>
+/*
 
-	<?php if (get_theme_mod('fullwidth_single')) { //Check if the post needs to be full width
-		$fullwidth = 'fullwidth';
-	} else {
-		$fullwidth = '';
-	} ?>
+Template Name: Full width
 
-	<div id="primary" class="content-area col-md-9 <?php echo $fullwidth; ?>">
-		<main id="main" class="post-wrap" role="main">
+*/
+	get_header();
+?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php sydney_post_navigation(); ?>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php endwhile; // end of the loop. ?>
+				<?php get_template_part( 'content', 'event' ); ?>
+
+				<?php
+
+					if ( comments_open() || '0' != get_comments_number() ) :
+
+						comments_template();
+
+					endif;
+				?>
+
+			<?php endwhile; // end of the loop. ?>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php //if ( get_theme_mod('fullwidth_single', 0) != 1 ) {
-	//get_sidebar();
-//} ?>
 <?php get_footer(); ?>
+

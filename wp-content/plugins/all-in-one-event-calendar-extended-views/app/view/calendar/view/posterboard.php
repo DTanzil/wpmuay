@@ -91,7 +91,9 @@ class Ai1ec_Calendar_View_Posterboard extends Ai1ec_Calendar_View_Extended_Views
 		) {
 			$args['has_product_buy_button'] = true;
 		}
+		
 		return $args;
+
 	}
 
 	/* (non-PHPdoc)

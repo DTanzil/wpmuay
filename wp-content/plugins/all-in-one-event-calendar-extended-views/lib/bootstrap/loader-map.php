@@ -1,7 +1,7 @@
 <?php return array (
   '0registered' => 
   array (
-    '' . DIRECTORY_SEPARATOR . 'home' . DIRECTORY_SEPARATOR . 'build' . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATOR . 'wordpress' . DIRECTORY_SEPARATOR . 'wp-content' . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . 'all-in-one-event-calendar' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'bootstrap' . DIRECTORY_SEPARATOR . 'loader-map.php' => true,
+    'C:' . DIRECTORY_SEPARATOR . 'wamp' . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATOR . 'muaysukhothai' . DIRECTORY_SEPARATOR . 'wp-content' . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR . 'all-in-one-event-calendar' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'bootstrap' . DIRECTORY_SEPARATOR . 'loader-map.php' => true,
   ),
   '1class_map' => 
   array (
