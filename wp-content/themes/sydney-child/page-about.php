@@ -33,4 +33,3 @@ Template Name: About Us Full Width template
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
-

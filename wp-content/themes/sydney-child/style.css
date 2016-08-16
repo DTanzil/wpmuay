@@ -61,7 +61,9 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
 	border-bottom-color:#D1DC2F;
 }
 
-
+a:hover {
+	text-decoration: underline;
+}
 
 .text-slider .maintitle, .mty-program-title {
 	font-size: 30px;
@@ -93,6 +95,10 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
 	color:white;
 }
 
+a.roll-button:hover {
+	background-color: #f11616;
+	color:white;
+}
 
 .footer-widgets {
 	padding: 25px 0;
@@ -104,32 +110,6 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
 	padding: 10px 65px;
 	border:none;
 	border-radius: 0;
-
-
-
-/*   background: #cf6767;
-   background: -webkit-gradient(linear, left top, left bottom, from(#D40000), to(#D46E6E));
-   background: -webkit-linear-gradient(top, #D40000, #D46E6E);
-   background: -moz-linear-gradient(top, #D40000, #D46E6E);
-   background: -ms-linear-gradient(top, #D40000, #D46E6E);
-   background: -o-linear-gradient(top, #D40000, #D46E6E);
-   padding: 10.5px 51px;
-   -webkit-border-radius: 0px;
-   -moz-border-radius: 0px;
-   border-radius: 0px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: white;
-   font-size: 14px;
-   font-family: Georgia, serif;
-   text-decoration: none;
-   vertical-align: middle;
-   border:none;
-*/
-
-
 }
 
 /* =============== GLOBAL (end) ================= */
@@ -159,7 +139,6 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
 }
 
 .corner-ribbon.top-left {
-	/*top: 15px; left: -65px;*/
 	top:25px;
 	left:175px;
 	transform: rotate(45deg);
@@ -329,7 +308,13 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
 
 /* =============== Trainers Page (end) ================= */
 
+/* =============== Students Page (start) ================= */
 
+th, td {
+	border:none;
+}
+
+/* =============== Students Page (end) ================= */
 
 
 /* =============== Responsive (start) ================= */
@@ -340,72 +325,3 @@ h1 { font: 52px/1.1 'Audiowide', cursive;}
 }
 
 /* =============== Responsive (end) ================= */
-
-
-
-
-
-
-
-/*
-#wrap{
-	background:#ddd;
-}
-
-.g-hover-card {
-  position: relative;  
-  text-align: center;
-  background-color: #fff;
-}
-
-.g-hover-card img {
-  width: 280px;
-  height: 135px;
-}
-
-.g-hover-card .user-avatar {
-  position: relative;
-  top: -40px;
-  margin-bottom: -40px;
-}
-
-.g-hover-card .user-avatar img {
-  width: 80px;
-  height: 80px;
-  max-width: 80px;
-  max-height: 80px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.g-hover-card .info {
-  padding: 4px 8px 10px;
-}
-
-.g-hover-card  .info.title {
-  margin-bottom: 4px;
-  font-size: 24px;
-  line-height: 1;
-  color: #262626;
-  vertical-align: middle;
-}
-
-.g-hover-card  .info.descriptions {
-  overflow: hidden;
-  font-size: 12px;
-  line-height: 20px;
-  color: #737373;
-  text-overflow: ellipsis;
-}
-
-.g-hover-card .bottom {
-  padding: 0 20px;
-  margin-bottom: 17px;
-}
-.g-hover-card{
-  width: 280px;
-  padding-top: 0;
-  overflow: hidden;
-}
-*/

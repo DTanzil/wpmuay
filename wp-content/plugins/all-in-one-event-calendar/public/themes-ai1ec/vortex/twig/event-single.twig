@@ -44,24 +44,25 @@
 	{% set col2 = 'ai1ec-col-sm-9' %}
 	<div class="ai1ec-event-details ai1ec-clearfix">
 {% else %}
-	{% set col1 = 'ai1ec-col-sm-3' %}
-	{% set col2 = 'ai1ec-col-sm-9' %}
-	<div class="ai1ec-event-details ai1ec-clearfix">
-
-	
+	{% set col1 = 'ai1ec-col-sm-4 ai1ec-col-md-5' %}
+	{% set col2 = 'ai1ec-col-sm-8 ai1ec-col-md-7' %}
+	<div class="ai1ec-event-details ai1ec-row">
+		<div class="ai1ec-map ai1ec-col-sm-5 ai1ec-col-sm-push-7">
+			{{ map | raw }}
+		</div>
+		<div class="ai1ec-col-sm-7 ai1ec-col-sm-pull-5">
 {% endif %}
-	
-	<div style="margin-bottom:20px;">
-		{{ map | raw }}
-	</div>
 
 	<div class="ai1ec-time ai1ec-row">
 		<div class="ai1ec-field-label {{ col1 }}">{{ text_when }}</div>
 		<div class="ai1ec-field-value {{ col2 }} dt-duration">
 			{{ event | timespan | raw }}
 			{% if timezone_info.show_timezone %}
-			<abbr class="ai1ec-initialism ai1ec-tooltip-trigger"
-				title="{{ timezone_info.text_timezone_title | e( 'html_attr' ) }}">{{ timezone_info.event_timezone }}</abbr>
+				{% if timezone_info.using_calendar_tz %}
+					<span>{{ timezone_info.calendar_timezone }}</span>
+				{% else %}
+					<span>{{ timezone_info.event_timezone }}</span>
+				{% endif %}
 			{% endif %}
 			{% include 'recurrence.twig' %}
 		</div>

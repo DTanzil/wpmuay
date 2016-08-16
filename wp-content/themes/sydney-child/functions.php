@@ -13,23 +13,26 @@ add_action( 'wp_enqueue_scripts', 'sydney_child_enqueue' );
 function sydney_child_enqueue() {
     
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-
+    wp_enqueue_script('datatable1', '//code.jquery.com/jquery-1.12.3.js');
+    wp_enqueue_script('datatable2', 'https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js');
+    wp_enqueue_style( 'datatablecss', 'https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css');
 }
+
+function sydney_child_javascript() {
+    wp_enqueue_style('myscript', get_stylesheet_directory_uri().'/js/myscript.js', array('jquery'), '1.0', 'screen, projection');
+}
+add_filter('child_add_javascripts','sydney_child_javascript');
+
 
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');
 
 function deactivate_plugin_conditional() {
     if ( is_plugin_active('all-in-one-event-calendar-extended-views/all-in-one-event-calendar-extended-views.php') ) {
-    	// var_dump("AFAF"); die();
     	// deactivate_plugins('all-in-one-event-calendar-extended-views/all-in-one-event-calendar-extended-views.php');    
-    } else {
-    	// var_dump("AFAaaaaF"); die();
-    }
+    } 
 }
 // add_action( 'wp_loaded', 'deactivate_plugin_conditional' );
-
-
 
 function child_remove_parent_function() {
     // remove_action( 'init', 'parent_function' );
@@ -248,32 +251,11 @@ function mty_custom_styles($custom) {
 		}
 	}
 
-	// TODO: Function which remove Plugin Update Notices – Askimet
-	function disable_plugin_updates( $value ) {
-	   unset( $value->response['akismet/akismet.php'] );
-	   return $value;
-	}
-	// add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
-
-
-
-
-	// function ai1ec_get_events_relative_to_filter_dan(array(
-	// 				'cat_ids'      => $args['cat_ids'],
-	// 				'tag_ids'      => $args['tag_ids'],
-	// 				'post_ids'     => $args['post_ids'],
-	// 				'auth_ids'     => $args['auth_ids'],
-	// 				'instance_ids' => $args['instance_ids'],
-	// 			),
-	// 			$view_args,
-	// 			apply_filters(
-	// 				'ai1ec_show_unique_events',
-	// 				false
-	// 			)) 
-	// {
-
+	// TODO: Function which remove Plugin Update Notices
+	// function disable_plugin_updates( $value ) {
+	//    unset($value->response['all-in-one-event-calendar/all-in-one-event-calendar.php'] );
+	//    return $value;
 	// }
-
-	// add_filter('ai1ec_get_events_relative_to_filter', 'ai1ec_get_events_relative_to_filter_dan', '10', '3');
+	// add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
 
 ?>

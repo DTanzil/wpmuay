@@ -138,11 +138,11 @@ class Ai1ec_Event_Parent extends Ai1ec_Base {
 					$old_post_id,
 					$instance_id
 				);
-				$location = esc_url( add_query_arg(
+				$location = add_query_arg(
 					'message',
 					1,
 					get_edit_post_link( $post_id, 'url' )
-				) );
+				);
 				wp_redirect(
 					apply_filters(
 						'redirect_post_location',
@@ -166,7 +166,7 @@ class Ai1ec_Event_Parent extends Ai1ec_Base {
 	 *
 	 * @return array Optionally modified $actions list
 	 */
-	public function post_row_actions( array $actions, $post ) {
+	public function post_row_actions( $actions, $post ) {
 		if ( $this->_registry->get( 'acl.aco' )->is_our_post_type( $post ) ) {
 			$parent_post_id = $this->event_parent( $post->ID );
 			if (
