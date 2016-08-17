@@ -252,10 +252,10 @@ function mty_custom_styles($custom) {
 	}
 
 	// TODO: Function which remove Plugin Update Notices
-	// function disable_plugin_updates( $value ) {
-	//    unset($value->response['all-in-one-event-calendar/all-in-one-event-calendar.php'] );
-	//    return $value;
-	// }
-	// add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
+	function disable_plugin_updates( $value ) {
+	   unset($value->response['all-in-one-event-calendar/all-in-one-event-calendar.php'] );
+	   return $value;
+	}
+	add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
 
 ?>
