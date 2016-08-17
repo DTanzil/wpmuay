@@ -38,15 +38,8 @@ Template Name: Students Full Width template
 <script type="text/javascript">
 	$(document).ready(function() {
 	     $('#example').DataTable( {
-			// select:true,
-	        // responsive: true,
 	        "pagingType": "full_numbers",
 	        "lengthMenu": [ [-1, 50], ["All", 50] ]
-    } );
-
-
-} );
-
-
-
+    });
+});
 </script>

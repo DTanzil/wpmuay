@@ -449,10 +449,10 @@ class Ai1ec_Event_Search extends Ai1ec_Base {
 		} else {
 			if ( $page_offset < 0 ) {
 				$filter_date_clause = 'i.end < %d ';
-				$order_direction    = 'DESC';
+				$order_direction    = 'ASC';
 			} else {
 				$filter_date_clause = 'i.end >= %d ';
-				$order_direction    = 'ASC';
+				$order_direction    = 'DESC';
 			}
 		}
 		if ( $page_offset >= 0 ) {
